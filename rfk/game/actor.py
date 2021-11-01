@@ -19,6 +19,7 @@ class Actor:
         """The class constructor."""
         self._description = ""
         self._text = ""
+        self._tag = ""
         self._position = Point(0, 0)
         self._velocity = Point(0, 0)
 
@@ -37,6 +38,9 @@ class Actor:
             Point: The actor's position in 2d space.
         """
         return self._position
+
+    def get_tag(self):
+        return self._tag
     
     def get_text(self):
         """Gets the actor's textual representation.
@@ -70,6 +74,9 @@ class Actor:
         """
         self._position = position
     
+    def set_tag(self, text):
+        self._tag = text
+        
     def set_text(self, text):
         """Updates the actor's text to the given value.
         
